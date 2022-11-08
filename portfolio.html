@@ -10,7 +10,10 @@
     />
     <link
       rel="stylesheet"
-      href="https://github.com/sindresorhus/modern-normalize/blob/0c3cb3a7dcf0fb4242a8736127a1d717b704c360/modern-normalize.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -22,13 +25,13 @@
         <!--Логотип-->
         <a href="" class="logo-header logo"><span class="logo">Web</span>Studio</a>
         <nav class="site-nav">
-          <ul class="site-nav list">
+          <ul class="site-nav-list">
             <li class="item"><a href="./index.html" class="link">Студія</a></li>
             <li class="item"><a href="" class="link current">Портфоліо</a></li>
             <li class="item"><a href="" class="link">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="header-address list">
+        <ul class="header-address">
           <li class="item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
           <li class="item">
             <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
@@ -60,8 +63,10 @@
             <li class="item">
               <a href="" class="element">
                 <img src="./images/portfolio1.jpg" alt="Технокряк" width="370" />
-                <h2 class="title">Техокряк</h2>
-                <p class="text">Веб-сайт</p>
+                <div class="work-list-info">
+                  <h2 class="title">Техокряк</h2>
+                  <p class="text">Веб-сайт</p>
+                </div>
               </a>
             </li>
             <li class="item">
@@ -71,57 +76,73 @@
                   alt="Постер New Orlean vs Golden Star"
                   width="370"
                 />
-                <h2 class="title">Постер New Orlean vs Golden Star</h2>
-                <p class="text">Дизайн</p>
+                <div class="work-list-info">
+                  <h2 class="title">Постер New Orlean vs Golden Star</h2>
+                  <p class="text">Дизайн</p>
+                </div>
               </a>
             </li>
             <li class="item">
               <a href="" class="element">
                 <img src="./images/portfolio3.jpg" alt="Ресторан Seafood" width="370" />
-                <h2 class="title">Ресторан Seafood</h2>
-                <p class="text">Додаток</p>
+                <div class="work-list-info">
+                  <h2 class="title">Ресторан Seafood</h2>
+                  <p class="text">Додаток</p>
+                </div>
               </a>
             </li>
             <li class="item">
               <a href="" class="element">
                 <img src="./images/portfolio4.jpg" alt="Проєкт Prime" width="370" />
-                <h2 class="title">Проєкт Prime</h2>
-                <p class="text">Маркетинг</p>
+                <div class="work-list-info">
+                  <h2 class="title">Проєкт Prime</h2>
+                  <p class="text">Маркетинг</p>
+                </div>
               </a>
             </li>
             <li class="item">
               <a href="" class="element">
                 <img src="./images/portfolio5.jpg" alt="Проєкт Boxes" width="370" />
-                <h2 class="title">Проєкт Boxes</h2>
-                <p class="text">Додаток</p>
+                <div class="work-list-info">
+                  <h2 class="title">Проєкт Boxes</h2>
+                  <p class="text">Додаток</p>
+                </div>
               </a>
             </li>
             <li class="item">
               <a href="" class="element">
                 <img src="./images/portfolio6.jpg" alt="Inspiration has no Borders" width="370" />
-                <h2 class="title">Inspiration has no Borders</h2>
-                <p class="text">Веб-сайт</p>
+                <div class="work-list-info">
+                  <h2 class="title">Inspiration has no Borders</h2>
+                  <p class="text">Веб-сайт</p>
+                </div>
               </a>
             </li>
             <li class="item">
               <a href="" class="element">
                 <img src="./images/portfolio7.jpg" alt="Видання Limited Edition" width="370" />
-                <h2 class="title">Видання Limited Edition</h2>
-                <p class="text">Дизайн</p>
+                <div class="work-list-info">
+                  <h2 class="title">Видання Limited Edition</h2>
+                  <p class="text">Дизайн</p>
+                </div>
               </a>
             </li>
             <li class="item">
               <a href="" class="element">
                 <img src="./images/portfolio8.jpg" alt="Проєкт LAB" width="370" />
-                <h2 class="title">Проєкт LAB</h2>
-                <p class="text">Маркетинг</p>
+                <div class="work-list-info">
+                  <h2 class="title">Проєкт LAB</h2>
+                  <p class="text">Маркетинг</p>
+                </div>
               </a>
             </li>
             <li class="item">
               <a href="" class="element">
                 <img src="./images/portfolio9.jpg" alt="Growing Business" width="370" />
-                <h2 class="title">Growing Business</h2>
-                <p class="text">Додаток</p>
+                <div class="work-list-info">
+                  <h2 class="title">Growing Business</h2>
+                  <p class="text">Додаток</p>
+                </div>
               </a>
             </li>
           </ul>
@@ -133,8 +154,8 @@
       <div class="container">
         <a href="" class="logo-footer logo"><span class="logo">Web</span>Studio</a>
         <address class="footer-address">
-          <ul class="footer-address list">
-            <li class="item"><a href="" class="post-adr">м. Київ, пр-т Лесі Українки, 26</a></li>
+          <ul class="footer-list">
+            <li class="item"><a href="https://goo.gl/maps/bqwwW3mDb6B119xg7" target="_blank" rel="noreferrer noopener nofollow"  class="post-adr">м. Київ, пр-т Лесі Українки, 26</a></li>
             <li class="item">
               <a href="mailto:info@devstudio.com" class="mob-adr">info@devstudio.com</a>
             </li>
