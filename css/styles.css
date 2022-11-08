@@ -9,8 +9,48 @@
   --hero-background-color: #2f303a;
   --comand-background-color: #f5f4fa;
   --header-border: #ececec;
-  --portfolio-border: #EEEEEE;
+  --portfolio-border: #eeeeee;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
 body {
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
@@ -18,12 +58,11 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
-img {
-  vertical-align: middle;
-}
+
 /*Навігація*/
 .container {
-  width: 1170px;
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -36,19 +75,21 @@ header {
   display: flex;
   align-items: center;
 }
-.site-nav .list {
-  display: flex;
+.site-nav {
   margin-left: 93px;
 }
-.site-nav .item:not(:last-child) {
+.site-nav-list {
+  display: flex;
+}
+
+.site-nav-list .item:not(:last-child) {
   margin-right: 50px;
 }
-.site-nav,
+.site-nav-list,
 .header-address {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 .logo {
   color: var(--accent-color);
@@ -56,22 +97,19 @@ header {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  text-decoration: none;
+
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .logo-header {
   color: var(--logo-black-color);
 }
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+
 .site-nav .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--title-color);
-  text-decoration: none;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -89,7 +127,9 @@ header {
 }
 .header-address .link {
   color: var(--primary-text-color);
-  text-decoration: none;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header-address .link:hover,
 .header-address .link:focus {
@@ -97,14 +137,18 @@ header {
 }
 /*Герой*/
 .hero {
-  padding: 200px;
+  padding: 200px 0;
   background-color: var(--hero-background-color);
   letter-spacing: 0.06em;
   text-align: center;
 }
 .hero-title {
+  margin: 0 auto;
+  max-width: 700px;
+
   margin-top: 0;
   margin-bottom: 30px;
+
   color: var(--primary-white-color);
   font-family: 'Roboto';
   font-weight: 900;
@@ -187,7 +231,7 @@ header {
   width: calc((100%-90px) / 4);
   margin-right: 30px;
 }
-.feature-list .item:nth-child(4n) {
+.feature-list .item:last-child {
   margin-right: 0;
 }
 .section-feature .text {
@@ -208,14 +252,15 @@ header {
   display: flex;
   padding-left: 0;
   padding-right: 0;
-  justify-content: space-between;
 }
-.works-list .link {
-  display: block;
+.works-list .item {
   padding-top: 0;
   padding-bottom: 0;
+  margin-right: 30px;
 }
-
+.works-list .item:last-child {
+  margin-right: 0;
+}
 /* Наша команда */
 .section-team {
   padding-top: 94px;
@@ -226,14 +271,25 @@ header {
 }
 .comand-list {
   display: flex;
-  justify-content: space-between;
 }
 
+.comand-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-picture-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.comand-list .item {
+  background-color: var(--primary-white-color);
+}
 .section-team .title {
   color: var(--title-color);
   font-size: 16px;
   font-weight: 500;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .section-team .text {
@@ -255,15 +311,16 @@ header {
   line-height: 1.7;
 }
 .footer-address .item {
-  margin-top: 9px;
+  margin-bottom: 9px;
+}
+.footer-address .item:last-child {
+  margin-bottom: 0;
 }
 .post-adr {
   color: var(--primary-white-color);
-  text-decoration: none;
 }
 .mob-adr {
   color: var(--adr-footer-color);
-  text-decoration: none;
 }
 .post-adr:hover,
 .post-adr:focus,
@@ -285,12 +342,12 @@ header {
   text-align: center;
 }
 .button-list {
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
 .button-list .item + .item {
-  margin-left: 30px;
+  margin-left: 8px;
 }
 .button-filter {
   border: 1px solid transparent;
@@ -341,11 +398,15 @@ header {
 }
 .section-filter .element {
   text-decoration: none;
+}
+.work-list-info {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--portfolio-border);
-  
 }
 .section-filter .title {
-  margin-left: 24px;
   color: var(--title-color);
   font-weight: 700;
   font-size: 18px;
@@ -353,10 +414,7 @@ header {
   letter-spacing: 0.06em;
 }
 .section-filter .text {
-  margin-left: 24px;
-
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
- 
 }
